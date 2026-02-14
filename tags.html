@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>待辦標籤管理</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="title">
+        <h1>待辦標籤管理</h1>
+        <p class="subtitle">更新後會回寫到 FAISS 備忘錄</p>
+      </div>
+      <div class="actions">
+        <input id="search" type="search" placeholder="搜尋內容..." />
+        <a class="ghost" href="/">回備忘錄</a>
+        <a class="ghost" href="/logout">登出</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="meta">
+        <div>總數：<span id="count">0</span></div>
+        <div>更新時間：<span id="updated">-</span></div>
+        <div id="sync-status" class="sync-status" aria-live="polite"></div>
+      </section>
+
+      <section class="filters">
+        <select id="filter-tag">
+          <option value="">標籤（全部）</option>
+        </select>
+        <button id="reset" class="ghost">清除篩選</button>
+        <button id="save-all" class="primary">全部儲存</button>
+      </section>
+
+      <section class="add-panel">
+        <h2>新增記事</h2>
+        <div class="add-form">
+          <input id="add-content" type="text" placeholder="輸入記事內容" />
+          <input id="add-date" type="date" />
+          <input id="add-tags" type="text" placeholder="標籤（以逗號分隔）" />
+          <button id="add-memo" class="primary">新增</button>
+        </div>
+      </section>
+
+      <section id="list" class="memo-grid"></section>
+    </main>
+
+    <template id="memo-card">
+      <article class="card">
+        <div class="card-head">
+          <span class="badge">#<span data-id></span></span>
+          <span class="time" data-time></span>
+        </div>
+        <p class="content" data-content></p>
+        <div class="meta-row" data-meta></div>
+        <label class="tag-editor">
+          日期（YYYY-MM-DD）
+          <input type="date" data-date-input />
+        </label>
+        <label class="tag-editor">
+          標籤（以逗號分隔）
+          <input type="text" data-tags-input placeholder="供應商, 對帳, 報告" />
+        </label>
+        <div class="card-actions">
+          <button data-gcal class="ghost">加到 Google Calendar</button>
+          <button data-save class="primary">儲存</button>
+          <button data-delete class="danger">刪除</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="tags.js"></script>
+  </body>
+</html>

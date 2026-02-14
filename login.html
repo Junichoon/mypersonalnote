@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>登入 - 待辦管理</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main style="max-width: 420px; margin: 80px auto;">
+      <section class="card" style="gap: 16px;">
+        <h1 style="margin: 0;">登入</h1>
+        <p class="subtitle">請輸入帳號密碼</p>
+        <form method="post" action="/login" class="modal" style="padding: 0;">
+          <label>
+            Email
+            <input name="email" type="email" required placeholder="email" />
+          </label>
+          <label>
+            密碼
+            <input name="password" type="password" required placeholder="password" />
+          </label>
+          <button type="submit" class="primary">登入</button>
+          <p id="login-error" style="color:#dc2626; display:none;">帳號或密碼錯誤</p>
+        </form>
+      </section>
+    </main>
+    <script src="login.js"></script>
+  </body>
+</html>

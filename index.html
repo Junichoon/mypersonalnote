@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的備忘錄</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="title">
+        <h1>我的備忘錄</h1>
+        <p class="subtitle">自動從 FAISS 備忘錄匯出</p>
+      </div>
+      <div class="actions">
+        <input id="search" type="search" placeholder="搜尋備忘錄..." />
+        <a class="ghost" href="/tags.html">標籤管理</a>
+        <a class="ghost" href="/logout">登出</a>
+        <button id="add" class="primary">新增</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="meta">
+        <div>總數：<span id="count">0</span></div>
+        <div>更新時間：<span id="updated">-</span></div>
+      </section>
+
+      <section class="filters">
+        <select id="filter-status">
+          <option value="">狀態（全部）</option>
+        </select>
+        <select id="filter-category">
+          <option value="">分類（全部）</option>
+        </select>
+        <button id="reset" class="ghost">清除篩選</button>
+      </section>
+
+      <section id="list" class="memo-grid"></section>
+    </main>
+
+    <dialog id="editor">
+      <form method="dialog" class="modal">
+        <h2 id="editor-title">新增備忘錄</h2>
+        <label>
+          內容
+          <textarea id="form-content" required rows="4" placeholder="輸入備忘錄內容..."></textarea>
+        </label>
+        <div class="form-row">
+          <label>
+            狀態
+            <input id="form-status" type="text" placeholder="pending / done / ..." />
+          </label>
+          <label>
+            分類
+            <input id="form-category" type="text" placeholder="finance / supplier / ..." />
+          </label>
+          <label>
+            日期
+            <input id="form-date" type="date" />
+          </label>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancel" class="ghost">取消</button>
+          <button type="submit" class="primary">儲存</button>
+        </div>
+      </form>
+    </dialog>
+
+    <template id="memo-card">
+      <article class="card">
+        <div class="card-head">
+          <label class="check">
+            <input type="checkbox" data-check />
+            <span class="check-mark"></span>
+          </label>
+          <span class="badge">#<span data-id></span></span>
+          <span class="time" data-time></span>
+        </div>
+        <p class="content" data-content></p>
+        <div class="meta-row" data-meta></div>
+        <div class="card-actions">
+          <button data-gcal class="ghost">加到 Google Calendar</button>
+          <button data-edit class="ghost">編輯</button>
+          <button data-delete class="danger">刪除</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

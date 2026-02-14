@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-02-14T23:12:50",
+  "count": 8,
+  "memos": [
+    {
+      "id": 20,
+      "content": "小珮小橘燈 Facebook 分享連結 https://www.facebook.com/share/r/1AuRhJPWWq/?mibextid=wwXIfr",
+      "timestamp": "2026-02-07T22:02:15",
+      "metadata": {
+        "category": "social_media",
+        "person": "小珮",
+        "platform": "facebook",
+        "type": "link",
+        "tags": [
+          "家人"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "content": "大洋靜電膜要樣捲測試",
+      "timestamp": "2026-02-07T22:02:07",
+      "metadata": {
+        "category": "memo",
+        "date": "2026-02-04",
+        "source": "telegram",
+        "time": "08:33",
+        "tags": [
+          "李總"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "content": "翔緯2月底回覆品質異常",
+      "timestamp": "2026-02-07T21:53:39",
+      "metadata": {
+        "category": "memo",
+        "date": "2026-02-05",
+        "source": "telegram",
+        "time": "13:02",
+        "tags": [
+          "李總"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "content": "KOPP60核價",
+      "timestamp": "2026-02-09T10:45:26",
+      "metadata": {
+        "status": "",
+        "category": "#供應商",
+        "date": ""
+      }
+    },
+    {
+      "id": 51,
+      "content": "CBPW12核價",
+      "timestamp": "2026-02-09T10:46:37",
+      "metadata": {
+        "status": "",
+        "category": "",
+        "date": ""
+      }
+    },
+    {
+      "id": 58,
+      "content": "聯絡廣洲雄星，詢問聯絡資料(海外業務窗口)",
+      "timestamp": "2026-02-12T16:14:53",
+      "metadata": {
+        "status": "",
+        "category": "",
+        "date": ""
+      }
+    },
+    {
+      "id": 59,
+      "content": "詢問聯華塑業聯絡窗口",
+      "timestamp": "2026-02-12T16:15:10",
+      "metadata": {
+        "status": "",
+        "category": "",
+        "date": ""
+      }
+    },
+    {
+      "id": 61,
+      "content": "KOPP60保險理賠結果通知",
+      "timestamp": "2026-02-13T16:27:06",
+      "metadata": {
+        "status": "",
+        "category": "",
+        "date": ""
+      }
+    }
+  ]
+}
